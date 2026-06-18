@@ -599,7 +599,7 @@ You will see this on your first visit.
 
 If you don’t have any providers or indexers, you need to purchase them. The usenet providers and indexers are a whole separate rabbit hole on its own. The general recommendation is to get one with **Omicron** backbone - [https://usenet.rexum.space/deals?backbones=Omicron](https://usenet.rexum.space/deals?backbones=Omicron). Find the cheapest deal you find and purchase it.&#x20;
 
-> **Black Friday** is usually the best time to purchase providers and indexers, prices are typically at all-time lows.
+> **Black Friday** is usually the best time to purchase providers and indexers, prices are typically at all-time lows. If you have **Torbox Pro,** starting July 1st 2026, it offers NNTP provider details which you can use for instant Usenet streaming without needing to purchase a provider (you still need indexers).
 
 In my humble opinion, it is not worth spending over 30$ a year on a provider, considering there are great deals out there (When purchasing outside of BF deals, there may be no other choice to purchase at a higher rate).
 
@@ -704,24 +704,58 @@ When you click a link, it should also appear in the NZBdavex queue dashboard, an
 
 ![](.gitbook/assets/image78.png)
 
-> 🔴 **If it doesn't work.** You have missed a step somewhere, please go back up, go over the steps and ensure you have done all steps correctly. If you still have questions, feel free to pop into the Aiostreams [discord](https://discord.gg/jdJUYnM2) server and ask for help.
+> 🔴 **If it doesn't work.** You have missed a step somewhere, please go back up, go over the steps and ensure you have done all steps correctly. If you still have questions, feel free to pop into the Aiostreams [discord](https://discord.gg/jdJUYnM2) server and ask for help. There is also NZBdavex [discord ](https://discord.gg/6UeXw7QN)server if you want help specific to that.&#x20;
 
 ***
 
-## FAQ
+## 9 - FAQ
 
-#### 1. Why make another guide when Viren's guides exist? What is the difference?
+#### 1. Why make another guide when Viren's guide exists? What is the difference?
 
-As the mentioned in the title, this guide is specifically focused on a GUI way of deploying and maintaining your stack. While Viren does have services like 'Arcane' in his compose templates, A lot of the guide focuses on working via the terminal. When I first started selfhosting, I found working via the terminal right off the bat, very difficult. I looked up guides and found a more approachable way to selfhosting and I wanted to share this knowledge to others who have put away selfhosting because they found it difficult. If you are in the IT industry or looking to learn more the topic and develop your knowledge in this field, I highly recommend sticking and using Viren's guides.&#x20;
+As the mentioned in the title, this guide is specifically focused on a GUI way of deploying and maintaining your stack. While Viren does have services like 'Arcane' in his compose templates, A lot of the guide focuses on working via the terminal. When I first started selfhosting, I found working via the terminal right off the bat, very difficult. I looked up guides and found a more approachable way to selfhosting and I wanted to share this knowledge to others who have put away selfhosting because they found it difficult. If you are in the IT industry or looking to learn more the topic and develop your knowledge in this field, I highly recommend sticking with and using [Viren's guides](https://guides.viren070.me/selfhosting).&#x20;
 
-#### 2. Torrentio is not working? Why?
+#### 2. Why isn't your guide starting from setting up Oracle VPS?&#x20;
+
+Primarily because Oracle changes their UI and offerings a lot. I have seen Viren struggle to update them constantly and I have learned my lesson, It is simple too much effort to keep on top of Oracle's changes. Besides there already exists many guides on acquiring a free VPS from Oracle, I don't want to make a guide on things that others have already made.
+
+#### 2. Why NZBdavex and not the original NZBdav or other projects like Altmount?
+
+I chose NZBdavex because it is the service I have been using as my main. There are many more projects that all achieve the same result. I encourage everyone to use the knowledge you have gained from this guide and try out other services and see what works best for you.
+
+#### 3. Torrentio is not working? Why?
 
 If you are hosting in oracle VPS, there's a good chance your instance IP has been blocked by Torrentio's Dev. Out of respect for the dev, I am not going to share ways to circumvent the block on a public guide.&#x20;
 
-#### 3. \*\*\*\*\* Indexer is not returning any results? Why?
+#### 4. \*\*\*\*\* Indexer is not returning any results? Why?
 
-If you followed all the steps correctly and the Indexer still dosen't work, The indexer is blocking your requests. As mentioned in the main guide, some indexers don't like being used for streaming. Similar to the FAQ above,  am not going to share ways to circumvent the block on a public guide.&#x20;
+If you followed all the steps correctly and the Indexer still doesn't work, The indexer is probably blocking your requests. As mentioned in the main guide, some indexers don't like being used for streaming. Similar to the FAQ above, I am not going to share ways to circumvent the block on a public guide.&#x20;
 
-#### 4. How do I get enterprise edition of Pangolin?
+#### 5. How do I get enterprise edition of Pangolin?
 
-I didn't want to write a guide on it yet because I am afraid Pangolin will change their ways. For now, Simply follow their [documentation ](https://docs.pangolin.net/self-host/enterprise-edition#get-a-free-license-personal-use)on how to get a key. Once you have your key in your pangolin dashboard, on the left, click **Server Admin** -> **Licenses** -> Enter your key here and activate it. You may need to wait a while and refresh for the changes to apply. No need to restart pangolin.&#x20;
+Simply follow this [documentation ](https://docs.pangolin.net/self-host/enterprise-edition#get-a-free-license-personal-use)on how to get a key. Once you have your key, Go to your Pangolin dashboard, on the left, click **Server Admin** -> **Licenses** -> Enter your key here and activate it. You may need to wait a while and refresh for the changes to apply. No need to restart Pangolin.&#x20;
+
+#### 6. How do I host \*\*\*\* service? Will you make a guide on it?
+
+It is simply not possible for me to make a guide on every single service out there. My hope is that the knowledge in this guide is enough for people to learn the basics of selfhosting and extrapolate the knowledge to other services. All you need is a compose file, which can be found in official github page or by getting it from someone else. Then add the service to pangolin's network. This can be done directly via compose by using the network section as shown for aiostreams, AIOmetadata and nzbdavex or alternatively via GUI by going to `Dockhand -> networks -> Pangolin_frontend -> click the chain icon -> and choose the service from the dropdown`. Then proceed to do the usual pangolin dashboard routine and add public resource and the service should be available via `service.domain.xyz`. I sincerely hope people continue to learn and get better. If you still need help, As always pop into the AIOstreams discord server and ask for help.
+
+#### 7. Will you post Optimization guides? Currently it only covers the basic settings.
+
+I am refraining from making optimization guides for now because these addons and services constantly keep evolving and adding new features. The best settings today may not be the best settings tomorrow. If there is a lot of interest I would be happy to make one in the future, but I will be cautious about it. I do not want to be constantly updating the guides. I would encourage people to join the official discord to be notified about the latest features and how it came improve their setup.
+
+***
+
+## 10 - Who Asked?
+
+#### 1. Do you have a donation link?
+
+If you want to donate, I highly recommend donating to the developers of these apps first. Without them, none of this would be possible.
+
+* **Viren** (Developer of AIOstreams) - [Donation Link](https://ko-fi.com/viren070)
+* **Cedya** and **Din** (Developers of AIOMetadata) - [Donation Link](https://buymeacoffee.com/cedya)
+* **Exate** (Developer of NZBdavex) - [Donation Link](https://patreon.com/exat3)
+
+If you are still swimming in money after donating to all these people, here is mine - [Donation Link](https://ko-fi.com/redhair7777).
+
+#### 2. Do you have a Torbox referral code? (Literally who asked?)
+
+Here you go - `798dd0d9-7cd2-4903-b90c-de5bfec8ba15`  or [link](https://torbox.app/subscription?referral=798dd0d9-7cd2-4903-b90c-de5bfec8ba15) if you prefer that.
