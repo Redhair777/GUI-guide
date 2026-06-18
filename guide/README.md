@@ -366,7 +366,7 @@ This is why Stremio can’t install it. It is because Pangolin is blocking the i
 
 ![HTTP requests log](.gitbook/assets/image55.png)
 
-> 💡 If you don't see the HTTP Requests section, you need to upgrade to Pangolin Enterprise Edition, which is **free for personal use**: [Get a free personal license](https://docs.pangolin.net/self-host/enterprise-edition#get-a-free-license-personal-use). Once you have the key, go to **Enterprise Edition** in the bottom-left of your Pangolin dashboard and enter the key, no restart needed.
+> 💡 If you don't see the HTTP Requests section, you need to upgrade to Pangolin Enterprise Edition, which is **free for personal use.** Please check FAQ section on how to activate it.
 
 Filter requests by resource and choose **aiostreams**:
 
@@ -380,7 +380,7 @@ Add a rule to bypass auth for the path `stremio/*` like shown below.
 
 ![Blocked request details](.gitbook/assets/image57.png)
 
-Click **Save Settubgs**. This setting means that anyone trying to access a URL that starts with`aiostreams.domain.xyz/stremio/…` will no longer be blocked by pangolin. To confirm it, try pasting your manifest URL in incognito again and it should work. Now try installing it to stremio and it should successfully install. However, this alone is not enough for proper functioning of aiostreams. Since you may use proxy features. For proxy streams to work properly you need to also add rule to bypass `api/v1/proxy/*`
+Click **Save Settubgs**. This setting means that anyone trying to access a URL that starts with `aiostreams.domain.xyz/stremio/…` will no longer be blocked by pangolin. To confirm it, try pasting your manifest URL in incognito again and it should work. Now try installing it to stremio and it should successfully install. However, this alone is not enough for proper functioning of aiostreams. Since you may use proxy features. For proxy streams to work properly you need to also add rule to bypass `api/v1/proxy/*`
 
 ![Aiostreams Access rule](.gitbook/assets/image58.png)
 
@@ -705,3 +705,23 @@ When you click a link, it should also appear in the NZBdavex queue dashboard, an
 ![](.gitbook/assets/image78.png)
 
 > 🔴 **If it doesn't work.** You have missed a step somewhere, please go back up, go over the steps and ensure you have done all steps correctly. If you still have questions, feel free to pop into the Aiostreams [discord](https://discord.gg/jdJUYnM2) server and ask for help.
+
+***
+
+## FAQ
+
+#### 1. Why make another guide when Viren's guides exist? What is the difference?
+
+As the mentioned in the title, this guide is specifically focused on a GUI way of deploying and maintaining your stack. While Viren does have services like 'Arcane' in his compose templates, A lot of the guide focuses on working via the terminal. When I first started selfhosting, I found working via the terminal right off the bat, very difficult. I looked up guides and found a more approachable way to selfhosting and I wanted to share this knowledge to others who have put away selfhosting because they found it difficult. If you are in the IT industry or looking to learn more the topic and develop your knowledge in this field, I highly recommend sticking and using Viren's guides.&#x20;
+
+#### 2. Torrentio is not working? Why?
+
+If you are hosting in oracle VPS, there's a good chance your instance IP has been blocked by Torrentio's Dev. Out of respect for the dev, I am not going to share ways to circumvent the block on a public guide.&#x20;
+
+#### 3. \*\*\*\*\* Indexer is not returning any results? Why?
+
+If you followed all the steps correctly and the Indexer still dosen't work, The indexer is blocking your requests. As mentioned in the main guide, some indexers don't like being used for streaming. Similar to the FAQ above,  am not going to share ways to circumvent the block on a public guide.&#x20;
+
+#### 4. How do I get enterprise edition of Pangolin?
+
+I didn't want to write a guide on it yet because I am afraid Pangolin will change their ways. For now, Simply follow their [documentation ](https://docs.pangolin.net/self-host/enterprise-edition#get-a-free-license-personal-use)on how to get a key. Once you have your key in your pangolin dashboard, on the left, click **Server Admin** -> **Licenses** -> Enter your key here and activate it. You may need to wait a while and refresh for the changes to apply. No need to restart pangolin.&#x20;
