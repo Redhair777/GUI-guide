@@ -646,7 +646,7 @@ Click **Save Indexer**. You may need to click save once again at the bottom. Nex
 
 <img src="https://i.postimg.cc/fbf16JSv/Screenshot-2026-06-17-202222.png" alt="" width="375">
 
-Remeber this profile section, we need to come back here later to get our Addon `manifest.json`. Next, Go to `Advanced section-> webdav` and set a `webdav` password here and click **Save**.
+Remember this profile section, we need to come back here later to get our Addon `manifest.json`. Next, Go to `Advanced section-> webdav` and set a `webdav` password here and click **Save**.
 
 <img src=".gitbook/assets/image73.png" alt="" width="375">
 
