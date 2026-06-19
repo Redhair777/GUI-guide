@@ -522,7 +522,7 @@ Visit `aiometadata.yourdomain.xyz/dashboard` . As always, replace `yourdomain` w
 
 <div><figure><img src="https://i.postimg.cc/SNH4rbk0/Screenshot-2026-06-17-192753.png" alt=""><figcaption></figcaption></figure> <figure><img src="https://i.postimg.cc/L6GSTFRw/Screenshot-2026-06-17-192805.png" alt=""><figcaption></figcaption></figure></div>
 
-In the dashboard, Go to **`Settings`**` ``->`` `**`Comprehensive Warming`**. Switch **Warmup Mode** from Essential to comprehesive. Enter your UUID you got from earlier and click the save button. And you should be done with enabling comprehensive warming. One of the best features of AIOmetadata!
+In the dashboard, Go to **`Settings`**` ``->`` `**`Comprehensive Warming`**. Switch **Warmup Mode** from Essential to comprehensive. Enter your UUID you got from earlier and click the save button. And you should be done with enabling comprehensive warming. One of the best features of AIOMetadata!
 
 <figure><img src="https://i.postimg.cc/hPRWzbrL/Screenshot-2026-06-17-193126.png" alt=""><figcaption></figcaption></figure>
 
@@ -538,7 +538,7 @@ Scroll down to **Options**, and enable all the options (download a backup if you
 
 <figure><img src="https://i.postimg.cc/7YSC09rc/Screenshot-2026-06-17-194409.png" alt=""><figcaption></figcaption></figure>
 
-You can now play around your configuration (where you got your UUID) and add custom posters, custom catalogues, edit catalogue names and so much more, all for **FREE**. Feel free to join the AIOMetadata channel inside the aiostreams discord server for help on how to make your setup better.
+You can now play around your configuration (where you got your UUID) and add custom posters, custom catalogues, edit catalogue names and so much more, all for **FREE**. Feel free to join the AIOMetadata channel inside the AIOstreams discord server for help on how to make your setup better.
 
 <figure><img src="https://i.postimg.cc/5tD1Pcwg/Screenshot-2026-06-17-194932.png" alt=""><figcaption><p>Fully customised stremio with custom posters and edited catalog names</p></figcaption></figure>
 
@@ -581,7 +581,7 @@ networks:
 
 Click **Save and Deploy**. We are adding NZBdavex to AIOstreams network as well so we can connect them later. Once deployed, To confirm they are connected to each other, click on the **Networks** on the left side. And click **View graph**
 
-We can see two lines from  `aiostreams` network, one to the `aiostreams` container and one to `nzbdavex` container.
+We can see two lines from  `aiostreams` network, one to the `aiostreams` container and one to `nzbdavex` container. This means that both AIOstreams and NZBdavex can talk to each other via the `aiostreams` network.
 
 ![](.gitbook/assets/image65.png) ![](.gitbook/assets/image66.png)
 
@@ -650,7 +650,7 @@ Remember this profile section, we need to come back here later to get our Addon 
 
 <img src=".gitbook/assets/image73.png" alt="" width="375">
 
-Then go to Sabnzbd section and add the URL `http://nzbdavex:3000` to base URL section. Click **Save**.
+Then go to SABnzbd section and add the URL `http://nzbdavex:3000` to base URL section. Click **Save**.
 
 <img src=".gitbook/assets/image74.png" alt="" width="375">
 
@@ -660,7 +660,7 @@ That should be it for the basics. We can now add it to AIOstreams.
 
 ### 8.3 Connecting NZBDavex to AIOstreams <a href="#connecting-nzbdavex-to-aiostreams" id="connecting-nzbdavex-to-aiostreams"></a>
 
-Currently Nzbdavex is not present in AIOstreams market place, as such, you will add it as `Usenet streamer` addon for the time being.
+Currently Nzbdavex is not present in AIOstreams market place, as such, we will add it as `Usenet streamer` addon for the time being.
 
 `AIOstreams → Addons → Marketplace → search "Usenet Streamer" → Configure`
 
@@ -682,7 +682,7 @@ Replace `https://nzbdavex.yourdomain.xyz` with `http://nzbdavex:3000`, so it bec
 http://nzbdavex:3000/adapters/addon/56a6fdda7d75f8446e61c8c2/manifest.json
 ```
 
-We are doing this so that AIOstreams can bypass Pangolin Auth and if you remember, we connected NZBdavex and AIOstreams with the same docker network (the one we saw in networks diagram).
+We are doing this so that AIOstreams can bypass Pangolin Auth and if you remember, we connected NZBdavex and AIOstreams with the `aiostreams` docker network (the one we saw in networks diagram).
 
 Once installed. Lets also make sure this is proxied. Go to the proxy section of AIOstreams (you can see it on the left side)
 
@@ -704,7 +704,7 @@ When you click a link, it should also appear in the NZBdavex queue dashboard, an
 
 ![](.gitbook/assets/image78.png)
 
-> 🔴 **If it doesn't work.** You have missed a step somewhere, please go back up, go over the steps and ensure you have done all steps correctly. If you still have questions, feel free to pop into the Aiostreams [discord](https://discord.gg/jdJUYnM2) server and ask for help. There is also NZBdavex [discord ](https://discord.gg/6UeXw7QN)server if you want help specific to that.&#x20;
+> 🔴 **If it doesn't work.** You have missed a step somewhere, please go back up, go over the steps and ensure you have done all steps correctly. If you still have questions, feel free to pop into the Aiostreams [discord](https://discord.gg/jdJUYnM2) server and ask for help. There is also NZBdavex [discord](https://discord.gg/6UeXw7QN) server if you want help specific to that.&#x20;
 
 ***
 
@@ -716,7 +716,7 @@ As the mentioned in the title, this guide is specifically focused on a GUI way o
 
 #### 2. Why isn't your guide starting from setting up Oracle VPS?&#x20;
 
-Primarily because Oracle changes their UI and offerings a lot. I have seen Viren struggle to update them constantly and I have learned my lesson, It is simple too much effort to keep on top of Oracle's changes. Besides there already exists many guides on acquiring a free VPS from Oracle, I don't want to make a guide on things that others have already made.
+Primarily because Oracle changes their UI and offerings a lot. I have seen Viren struggle to update them constantly and I have learned my lesson, It is simply too much effort to keep on top of Oracle's changes. Besides there already exists many guides on acquiring a free VPS from Oracle, I don't want to make a guide on things that others have already made.
 
 #### 2. Why NZBdavex and not the original NZBdav or other projects like Altmount?
 
@@ -736,7 +736,7 @@ Simply follow this [documentation ](https://docs.pangolin.net/self-host/enterpri
 
 #### 6. How do I host \*\*\*\* service? Will you make a guide on it?
 
-It is simply not possible for me to make a guide on every single service out there. My hope is that the knowledge in this guide is enough for people to learn the basics of selfhosting and extrapolate the knowledge to other services. All you need is a compose file, which can be found in official github page or by getting it from someone else. Then add the service to pangolin's network. This can be done directly via compose by using the network section as shown for aiostreams, AIOmetadata and nzbdavex or alternatively via GUI by going to `Dockhand -> networks -> Pangolin_frontend -> click the chain icon -> and choose the service from the dropdown`. Then proceed to do the usual pangolin dashboard routine and add public resource and the service should be available via `service.domain.xyz`. I sincerely hope people continue to learn and get better. If you still need help, As always pop into the AIOstreams discord server and ask for help.
+It is simply not possible for me to make a guide on every single service out there. My hope is that the knowledge in this guide is enough for people to learn the basics of selfhosting and can extrapolate the knowledge to other services. All you need is a compose file, which can be found in official github page or by getting it from someone else. Then add the service to pangolin's network. This can be done directly via compose by using the network section as shown for aiostreams, AIOmetadata and nzbdavex or alternatively via GUI by going to `Dockhand -> networks -> Pangolin_frontend -> click the chain icon -> and choose the service from the dropdown`. Then proceed to do the usual pangolin dashboard routine and add public resource and the service should be available via `service.domain.xyz`. I sincerely hope people continue to learn and get better. If you still need help, As always pop into the AIOstreams discord server and ask for help.
 
 #### 7. Will you post Optimization guides? Currently it only covers the basic settings.
 
