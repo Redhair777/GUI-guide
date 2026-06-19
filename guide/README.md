@@ -36,7 +36,7 @@ Some popular domain registrars:
 
 ### **2.3 Connect your domain to your VPS.**
 
-Once you have you have both VPS and domain, you need to connect it to each other. This is done in the website you bought your domain from.
+Once you have both a VPS and domain, you need to connect it to each other. This is done in the website you bought your domain from.
 
 {% tabs %}
 {% tab title="Spaceship" %}
