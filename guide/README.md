@@ -340,7 +340,7 @@ Click **Save and Deploy**.
 
 ### 6.2 Setting Up Auth and Reverse Proxy for AIOstreams <a href="#setting-up-auth-and-reverse-proxy-for-aiostreams" id="setting-up-auth-and-reverse-proxy-for-aiostreams"></a>
 
-Now time to go to pangolin and tell it to put aiostreams behing this domain `aiostreams.domain.xyz`. See how in the compose file on the left we have `container_name: aiostreams` and `expose: 3000` , this means that the app is available at `aiostreams:3000` to pangolin.
+Now time to go to pangolin and tell it to put aiostreams behind this domain `aiostreams.domain.xyz`. See how in the compose file on the left we have `container_name: aiostreams` and `expose: 3000` , this means that the app is available at `aiostreams:3000` to pangolin.
 
 `Pangolin Dashbaord → Resources → Public (in the left sidebar) → Add Resource`
 
@@ -380,7 +380,7 @@ Add a rule to bypass auth for the path `stremio/*` like shown below.
 
 ![Blocked request details](.gitbook/assets/image57.png)
 
-Click **Save Settubgs**. This setting means that anyone trying to access a URL that starts with `aiostreams.domain.xyz/stremio/…` will no longer be blocked by pangolin. To confirm it, try pasting your manifest URL in incognito again and it should work. Now try installing it to stremio and it should successfully install. However, this alone is not enough for proper functioning of aiostreams. Since you may use proxy features. For proxy streams to work properly you need to also add rule to bypass `api/v1/proxy/*`
+Click **Save Settings**. This setting means that anyone trying to access a URL that starts with `aiostreams.domain.xyz/stremio/…` will no longer be blocked by pangolin. To confirm it, try pasting your manifest URL in incognito again and it should work. Now try installing it to stremio and it should successfully install. However, this alone is not enough for proper functioning of aiostreams. Since you may use proxy features. For proxy streams to work properly you need to also add rule to bypass `api/v1/proxy/*`
 
 ![Aiostreams Access rule](.gitbook/assets/image58.png)
 
