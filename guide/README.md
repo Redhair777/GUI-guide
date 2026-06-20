@@ -486,7 +486,7 @@ AIOmetadata should now be accessible at `aiometadata.yourdomain.xyz`. Add the fo
 
 ![AIOmetadata Access rules](https://i.postimg.cc/V6LQxTx4/image.png)
 
-Also add  `api/auth/*` If you plan on adding Trakt, Simkl and other integrations integration.
+You may need to add more rules, If you plan on adding Trakt, Simkl and other integrations integration. Loop back to this section later when you are setting them.
 
 ### 7.2 Setting up AIOmetadata
 
