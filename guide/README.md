@@ -484,7 +484,7 @@ And as always, go to Pangolin:
 
 AIOmetadata should now be accessible at `aiometadata.yourdomain.xyz`. Add the following Access Rules to prevent Pangolin from Interfering with any functionality.
 
-![AIOmetadata Access rules](https://i.postimg.cc/VNqHdbGs/Screenshot-2026-06-16-002852.png)
+![AIOmetadata Access rules](https://i.postimg.cc/V6LQxTx4/image.png)
 
 Also add  `api/auth/*` If you plan on adding Trakt, Simkl and other integrations integration.
 
