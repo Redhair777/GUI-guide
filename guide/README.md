@@ -394,7 +394,7 @@ However, Do not allow random requests! For example, A bot from the Netherlands i
 
 Here is an example of how I am adding a **country-based rule** to restrict access to only my country and stop the activity of foreign bots.&#x20;
 
-![Country based access rules](https://i.postimg.cc/1t46bkN0/Screenshot-2026-06-16-003416.png)
+![Country based access rules](https://i.postimg.cc/RVKHpfhh/Screenshot-2026-06-21-001605.png)
 
 > ⚠️ **Do not rely solely on geo-blocks.** There can be bots or bad actors from your own country. For safe usage, **block all access by default**, then **only allow specific paths** (like `stremio/*`) on top of geo-blocks.
 
