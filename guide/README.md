@@ -382,7 +382,7 @@ Add a rule to bypass auth for the path `stremio/*` like shown below.
 
 Click **Save Settings**. This setting means that anyone trying to access a URL that starts with `aiostreams.domain.xyz/stremio/…` will no longer be blocked by pangolin. To confirm it, try pasting your manifest URL in incognito again and it should work. Now try installing it to stremio and it should successfully install. However, this alone is not enough for proper functioning of aiostreams.  Since you may use proxy features. For proxy streams to work properly you need to also add rule to bypass `api/v1/proxy/*` . I also blocked all config pages by blocking `*/configure/*` and by setting it at the highest priority. This will ensure anyone trying to create a config needs to login to pangolin ( for friends and family you can create a temporary password for pangolin).
 
-![Aiostreams Access rule](https://i.postimg.cc/1XQczKYR/Screenshot-2026-06-20-224007.png)
+![Aiostreams Access rule](https://i.postimg.cc/nLwWJQF3/Screenshot-2026-06-21-103416.png)
 
 ### 6.3 Understanding Pangolin's Security
 
@@ -394,7 +394,7 @@ However, Do not allow random requests! For example, A bot from the Netherlands i
 
 Here is an example of how I am adding a **country-based rule** to restrict access to only my country and stop the activity of foreign bots.&#x20;
 
-![Country based access rules](https://i.postimg.cc/RVKHpfhh/Screenshot-2026-06-21-001605.png)
+![Country based access rules](https://i.postimg.cc/6Q1PXGWL/Screenshot-2026-06-21-103423.png)
 
 > ⚠️ **Do not rely solely on geo-blocks.** There can be bots or bad actors from your own country. For safe usage, **block all access by default**, then **only allow specific paths** (like `stremio/*`) on top of geo-blocks.
 
