@@ -398,7 +398,7 @@ Here is an example of how I am adding a **country-based rule** to restrict acces
 
 > ⚠️ **Do not rely solely on geo-blocks.** There can be bots or bad actors from your own country. For safe usage, **block all access by default**, then **only allow specific paths** (like `stremio/*`) on top of geo-blocks.
 
-I have purposefully only gone through only the basic configuration of aiostreams since it’s a highly customizable and configurable tool and there already exists documentation for it. If you are looking for specific options, you can check out the  [official documentation](https://docs.aiostreams.viren070.me/). The AIOstreams Discord is also a great place to ask for help.
+I have purposefully only gone through only the basic configuration of aiostreams since it’s a highly customizable and configurable tool and there already exists documentation for it. If you are looking for specific options, you can check out the  [official documentation](https://docs.aiostreams.viren070.me/). The AIOstreams Discord is also a great place to ask for help. **I have also intentionally NOT added all possible access rules for AIOstreams to function properly. I want YOU to learn!! So look at HTTP logs and add access rules to make it work for your use case.**
 
 > If someone tells you to "add something to your env", go to `Dockhand → Stacks → aiostreams` and add/change what you need on the right side. On the latest versions, you can do most things directly via the AIOstreams admin panel.
 
