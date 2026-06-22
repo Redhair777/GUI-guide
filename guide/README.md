@@ -746,15 +746,15 @@ I am refraining from making optimization guides for now because these addons and
 
 ## 10 - Who Asked?
 
-#### 1. Do you have a donation link?
+#### 1. Do you have a link to Tip you?
 
-If you want to donate, I highly recommend donating to the developers of these apps first. Without them, none of this would be possible.
+If you want to tip, I highly recommend tipping the developers of these apps first. Without them, none of this would be possible.
 
 * **Viren** (Developer of AIOstreams) - [Donation Link](https://ko-fi.com/viren070)
 * **Cedya** and **Din** (Developers of AIOMetadata) - [Donation Link](https://buymeacoffee.com/cedya)
 * **Exate** (Developer of NZBdavex) - [Donation Link](https://patreon.com/exat3)
 
-If you are still swimming in money after donating to all these people, here is mine - [Donation Link](https://ko-fi.com/redhair7777).
+If you are still swimming in money after donating to all these people, here is mine - [Tip Link](https://ko-fi.com/redhair7777).
 
 #### 2. Do you have a Torbox referral code? (Literally who asked?)
 
