@@ -1,0 +1,28 @@
+name: Build template catalog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/**'
+      - 'scripts/generate-templates.js'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate templates.json
+        run: node scripts/generate-templates.js
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add templates.json
+          git diff --cached --quiet || git commit -m "chore: regenerate templates.json"
+          git push
