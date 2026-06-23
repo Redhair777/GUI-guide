@@ -5,7 +5,18 @@ services:
     restart: unless-stopped
     expose:
       - 3000
-    env_file:
-      - .env
+    environment:
+      - BASE_URL=https://aiostreams.replace.me
+      - AIOSTREAMS_AUTH=user:pass
+      - SECRET_KEY=
     volumes:
       - ./data:/app/data
+    networks:
+      - pangolin_frontend
+      - aiostreams
+
+networks:
+  pangolin_frontend:
+    external: true
+  aiostreams:
+    external: true
