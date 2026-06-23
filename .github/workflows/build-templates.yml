@@ -6,6 +6,7 @@ on:
     paths:
       - 'apps/**'
       - 'scripts/generate-templates.js'
+  workflow_dispatch: {}
 
 permissions:
   contents: write
