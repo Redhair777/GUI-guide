@@ -9,18 +9,6 @@ function titleize(name) {
   return name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 }
 
-function parseEnvFile(filePath) {
-  if (!fs.existsSync(filePath)) return [];
-  return fs.readFileSync(filePath, 'utf8')
-    .split('\n')
-    .map(l => l.trim())
-    .filter(l => l && !l.startsWith('#') && l.includes('='))
-    .map(l => {
-      const key = l.slice(0, l.indexOf('=')).trim();
-      return { name: key, label: titleize(key) };
-    });
-}
-
 function buildTemplates() {
   const templates = [];
   const folders = fs.readdirSync(APPS_DIR).filter(f =>
@@ -35,7 +23,7 @@ function buildTemplates() {
       continue;
     }
 
-    const template = {
+    templates.push({
       type: 3,
       name: folder,
       title: titleize(folder),
@@ -43,12 +31,7 @@ function buildTemplates() {
         url: REPO_URL,
         stackfile: `apps/${folder}/${composeFile}`
       }
-    };
-
-    const env = parseEnvFile(path.join(appDir, '.env'));
-    if (env.length) template.env = env;
-
-    templates.push(template);
+    });
   }
 
   return { version: '2', templates };
