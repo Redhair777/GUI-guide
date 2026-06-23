@@ -8,29 +8,7 @@
       "repository": {
         "url": "https://github.com/Redhair777/GUI-guide",
         "stackfile": "apps/aiometadata/compose.yaml"
-      },
-      "env": [
-        {
-          "name": "ADMIN_KEY",
-          "label": "ADMIN KEY"
-        },
-        {
-          "name": "ADDON_PASSWORD",
-          "label": "ADDON PASSWORD"
-        },
-        {
-          "name": "REDIS_URL",
-          "label": "REDIS URL"
-        },
-        {
-          "name": "HOST_NAME",
-          "label": "HOST NAME"
-        },
-        {
-          "name": "DATABASE_URI",
-          "label": "DATABASE URI"
-        }
-      ]
+      }
     },
     {
       "type": 3,
@@ -39,21 +17,7 @@
       "repository": {
         "url": "https://github.com/Redhair777/GUI-guide",
         "stackfile": "apps/aiostreams/docker-compose.yml"
-      },
-      "env": [
-        {
-          "name": "BASE_URL",
-          "label": "BASE URL"
-        },
-        {
-          "name": "AIOSTREAMS_AUTH",
-          "label": "AIOSTREAMS AUTH"
-        },
-        {
-          "name": "SECRET_KEY",
-          "label": "SECRET KEY"
-        }
-      ]
+      }
     }
   ]
 }
