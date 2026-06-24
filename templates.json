@@ -5,7 +5,6 @@
       "type": 3,
       "name": "aiometadata",
       "title": "AIOMetadata",
-      "platform": "linux",
       "repository": {
         "url": "https://github.com/Redhair777/GUI-guide",
         "stackfile": "apps/aiometadata/compose.yaml"
@@ -20,7 +19,6 @@
       "type": 3,
       "name": "aiostreams",
       "title": "AIOStreams",
-      "platform": "linux",
       "repository": {
         "url": "https://github.com/Redhair777/GUI-guide",
         "stackfile": "apps/aiostreams/docker-compose.yml"
