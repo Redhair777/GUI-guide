@@ -8,7 +8,12 @@
       "repository": {
         "url": "https://github.com/Redhair777/GUI-guide",
         "stackfile": "apps/NZBDavex/compose.yaml"
-      }
+      },
+      "description": "NZBDavex is an extended fork of nzbdav with additional functionality layered on top.",
+      "categories": [
+        "Stremio"
+      ],
+      "logo": "https://i.postimg.cc/fyzrmGgH/logo.png"
     },
     {
       "type": 3,
