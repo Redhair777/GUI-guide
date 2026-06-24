@@ -13,7 +13,7 @@ services:
       - ./data:/app/data
     networks:
       - pangolin_frontend
-      - aiostreams
+      - aiostreams # Make sure to create this network first in Dockhand-> Networks -> "+ Create"
 
 networks:
   pangolin_frontend:
