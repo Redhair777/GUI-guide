@@ -3,6 +3,15 @@
   "templates": [
     {
       "type": 3,
+      "name": "NZBDavex",
+      "title": "NZBDavex",
+      "repository": {
+        "url": "https://github.com/Redhair777/GUI-guide",
+        "stackfile": "apps/NZBDavex/compose.yaml"
+      }
+    },
+    {
+      "type": 3,
       "name": "aiometadata",
       "title": "AIOMetadata",
       "repository": {
