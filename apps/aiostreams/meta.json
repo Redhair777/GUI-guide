@@ -2,4 +2,5 @@
   "title": "AIOStreams",
   "description": "AIOStreams consolidates multiple Stremio addons and debrid services - including its own suite of built-in addons - into a single, highly customisable super-addon.",
   "category": "Stremio"
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/aiostreams-light.png"
 }
