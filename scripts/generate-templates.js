@@ -9,6 +9,18 @@ function titleize(name) {
   return name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 }
 
+function loadMeta(appDir, folder) {
+  const metaPath = path.join(appDir, 'meta.json');
+  const defaults = { title: titleize(folder), description: '', category: '', logo: '' };
+  if (!fs.existsSync(metaPath)) return defaults;
+  try {
+    return { ...defaults, ...JSON.parse(fs.readFileSync(metaPath, 'utf8')) };
+  } catch (e) {
+    console.warn(`Could not parse meta.json for ${folder}, using defaults`);
+    return defaults;
+  }
+}
+
 function buildTemplates() {
   const templates = [];
   const folders = fs.readdirSync(APPS_DIR).filter(f =>
@@ -23,15 +35,22 @@ function buildTemplates() {
       continue;
     }
 
-    templates.push({
+    const meta = loadMeta(appDir, folder);
+
+    const template = {
       type: 3,
       name: folder,
-      title: titleize(folder),
+      title: meta.title,
       repository: {
         url: REPO_URL,
         stackfile: `apps/${folder}/${composeFile}`
       }
-    });
+    };
+    if (meta.description) template.description = meta.description;
+    if (meta.category) template.categories = [meta.category];
+    if (meta.logo) template.logo = meta.logo;
+
+    templates.push(template);
   }
 
   return { version: '2', templates };
