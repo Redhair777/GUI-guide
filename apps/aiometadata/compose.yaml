@@ -17,7 +17,7 @@ services:
       - ./aiometadata/data:/app/addon/data
     networks:
       - pangolin_frontend
-      - aiometadata
+      - aiometadata # Make sure to create this network first in Dockhand-> Networks -> "+ Create"
     depends_on:
       aiometadata_redis:
         condition: service_healthy
