@@ -13,11 +13,16 @@
     {
       "type": 3,
       "name": "aiostreams",
-      "title": "Aiostreams",
+      "title": "AIOStreams",
       "repository": {
         "url": "https://github.com/Redhair777/GUI-guide",
         "stackfile": "apps/aiostreams/docker-compose.yml"
-      }
+      },
+      "description": "AIOStreams consolidates multiple Stremio addons and debrid services - including its own suite of built-in addons - into a single, highly customisable super-addon.",
+      "categories": [
+        "Stremio"
+      ],
+      "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/aiostreams-light.png"
     }
   ]
 }
