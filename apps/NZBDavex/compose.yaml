@@ -1,0 +1,20 @@
+services:
+  nzbdavex:
+    image: ghcr.io/qooode/nzbdavex:edge
+    container_name: nzbdavex
+    restart: unless-stopped
+    expose:
+      - 3000
+    volumes:
+      - ./nzbdavex_config:/config
+    environment:
+      - DISABLE_FRONTEND_AUTH=true #Comment this section If you don't plan to use Pangolin or any other Auth.
+    networks:
+      - pangolin_frontend
+      - aiostreams
+
+networks:
+  pangolin_frontend:
+    external: true
+  aiostreams:
+    external: true
