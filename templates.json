@@ -4,11 +4,16 @@
     {
       "type": 3,
       "name": "aiometadata",
-      "title": "Aiometadata",
+      "title": "AIOMetadata",
       "repository": {
         "url": "https://github.com/Redhair777/GUI-guide",
         "stackfile": "apps/aiometadata/compose.yaml"
-      }
+      },
+      "description": "AIOMetadata is a next-generation, power-user-focused metadata addon for Stremio.",
+      "categories": [
+        "Stremio"
+      ],
+      "logo": "https://raw.githubusercontent.com/cedya77/aiometadata/refs/heads/dev/public/logo.png"
     },
     {
       "type": 3,
