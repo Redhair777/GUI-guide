@@ -41,6 +41,7 @@ function buildTemplates() {
       type: 3,
       name: folder,
       title: meta.title,
+      platform: 'linux',
       repository: {
         url: REPO_URL,
         stackfile: `apps/${folder}/${composeFile}`
