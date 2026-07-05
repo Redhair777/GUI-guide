@@ -712,7 +712,7 @@ When you click a link, it should also appear in the NZBdavex queue dashboard, an
 
 ## 9 - Usenet streaming with Built-in AIOstreams
 
-First things first, we need to switch to nightly tag of AIOstreams. So go to stacks in dockhand-> aiostreams-> In the compose section on the left, replace `image: ghcr.io/viren070/aiostreams:latest`  to `image: ghcr.io/viren070/aiostreams:nightly` -> click **save and redeploy**. Go to container section and ensure you see aiostreams is healthy and running
+First things first, we need to switch to nightly tag of AIOstreams. So go to stacks-> aiostreams-> In the compose section on the left, replace `image: ghcr.io/viren070/aiostreams:latest`  to `image: ghcr.io/viren070/aiostreams:nightly` -> click **save and redeploy**. Go to container section and ensure you see aiostreams is healthy and running
 
 <figure><img src="https://i.postimg.cc/cLHqyBYr/Screenshot-2026-07-05-182508.png" alt=""><figcaption></figcaption></figure>
 
