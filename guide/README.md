@@ -382,7 +382,7 @@ Add a rule to bypass auth for the path `stremio/*` like shown below.
 
 Click **Save Settings**. This setting means that anyone trying to access a URL that starts with `aiostreams.domain.xyz/stremio/…` will no longer be blocked by pangolin. To confirm it, try pasting your manifest URL in incognito again and it should work. Now try installing it to stremio and it should successfully install. However, this alone is not enough for proper functioning of aiostreams.  Since you may use proxy features. For proxy streams to work properly you need to also add rule to bypass `api/v1/proxy/*` . I also blocked all config pages by blocking `*/configure/*` and by setting it at the highest priority. This will ensure anyone trying to create a config needs to login to pangolin ( for friends and family you can create a temporary password for pangolin).
 
-![Aiostreams Access rule](https://i.postimg.cc/RhcLKfPL/Screenshot-2026-06-24-125837.png)
+![Aiostreams Access rule](https://i.postimg.cc/s2HgC2v5/Screenshot-2026-07-05-182133.png)
 
 ### 6.3 Understanding Pangolin's Security
 
@@ -394,7 +394,7 @@ However, Do not allow random requests! For example, A bot from the Netherlands i
 
 Here is an example of how I am adding a **country-based rule** to restrict access to only my country and stop the activity of foreign bots.&#x20;
 
-![Country based access rules](https://i.postimg.cc/9z5yfMCD/Screenshot-2026-06-24-125613.png)
+![Country based access rules](https://i.postimg.cc/CKrxpKzk/Screenshot-2026-07-05-182142.png)
 
 > ⚠️ **Do not rely solely on geo-blocks.** There can be bots or bad actors from your own country. For safe usage, **block all access by default**, then **only allow specific paths** (like `stremio/*`) on top of geo-blocks.
 
@@ -549,6 +549,8 @@ For more features like anilist/mdblist/trakt integration, Poster cache and how t
 ***
 
 ## 8 - Usenet Streaming setup
+
+> Note: AIOstreams now has built in Usenet streaming capabilities, if you would like to use that instead of spinning up a separate NZBDavex container, check out section 9.1. They both have their pros on cons, NZBDavex might be better for usenet only setup while AIOstreams should be better with usenet+debrid setup.
 
 ### 8.1 Deploying NZBDavex <a href="#deploying-nzbdavex-usenet-streaming" id="deploying-nzbdavex-usenet-streaming"></a>
 
@@ -708,7 +710,11 @@ When you click a link, it should also appear in the NZBdavex queue dashboard, an
 
 ***
 
-## 9 - FAQ
+## 9 - Usenet streaming with Built-in AIOstreams
+
+First things first, we need to switch to nightly tag of AIOstreams. So go to stacks-> aiostreams-> In the compose section on the left, replace `image: ghcr.io/viren070/aiostreams:latest`  to `image: ghcr.io/viren070/aiostreams:nightly` -> click **save and redeploy**.
+
+## 10 - FAQ
 
 #### 1. Why make another guide when Viren's guide exists? What is the difference?
 
@@ -744,7 +750,7 @@ I am refraining from making optimization guides for now because these addons and
 
 ***
 
-## 10 - Who Asked?
+## 11 - Who Asked?
 
 #### 1. Do you have a link to Tip you?
 
