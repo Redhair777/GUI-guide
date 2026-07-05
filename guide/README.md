@@ -550,7 +550,7 @@ For more features like anilist/mdblist/trakt integration, Poster cache and how t
 
 ## 8 - Usenet Streaming setup
 
-> Note: AIOstreams now has built in Usenet streaming capabilities, if you would like to use that instead of spinning up a separate NZBDavex container, check out section 9.1. They both have their pros on cons, NZBDavex might be better for usenet only setup while AIOstreams should be better with usenet+debrid setup.
+> Note 🔴: AIOstreams now has built in Usenet streaming capabilities, if you would like to use that instead of spinning up a separate NZBDavex container, check out section 9.1. They both have their pros on cons, NZBDavex might be better for usenet only setup while AIOstreams should be better with usenet+debrid setup.
 
 ### 8.1 Deploying NZBDavex <a href="#deploying-nzbdavex-usenet-streaming" id="deploying-nzbdavex-usenet-streaming"></a>
 
@@ -712,7 +712,27 @@ When you click a link, it should also appear in the NZBdavex queue dashboard, an
 
 ## 9 - Usenet streaming with Built-in AIOstreams
 
-First things first, we need to switch to nightly tag of AIOstreams. So go to stacks-> aiostreams-> In the compose section on the left, replace `image: ghcr.io/viren070/aiostreams:latest`  to `image: ghcr.io/viren070/aiostreams:nightly` -> click **save and redeploy**.
+First things first, we need to switch to nightly tag of AIOstreams. So go to stacks in dockhand-> aiostreams-> In the compose section on the left, replace `image: ghcr.io/viren070/aiostreams:latest`  to `image: ghcr.io/viren070/aiostreams:nightly` -> click **save and redeploy**. Go to container section and ensure you see aiostreams is healthy and running
+
+<figure><img src="https://i.postimg.cc/cLHqyBYr/Screenshot-2026-07-05-182508.png" alt=""><figcaption></figcaption></figure>
+
+Go to `aiostreams.yourdomain.xyz/dashboard` . Enter your auth user and password when prompted (the one you entered in the env section of aiostreams). Look at the sidebar,. Go to the **usenet** section and then the **provider** section and click **add provider.**
+
+<div><figure><img src="https://i.postimg.cc/zfFTCK28/Screenshot-2026-07-05-182856.png" alt=""><figcaption></figcaption></figure> <figure><img src="https://i.postimg.cc/Wb06nd48/Screenshot-2026-07-05-183243.png" alt=""><figcaption></figcaption></figure></div>
+
+You can find the Host URL, max connections, username/password, port and other information in your provider dashboard after you have purchased a plan (if you havent purchased any, check section 8.2.1 for some general recommendations). Always choose SSL ports, most providers offer it at port **563** and **443**. Leave “**Backup**” turned off if you purchased an unlimited plan, turn it on if you purchased a block that lasts only for 1 TB. Next go to your aiostreams config -> add aiostreams from service section similar to how you add your debrid service
+
+<div><figure><img src="https://i.postimg.cc/25ksmptF/Screenshot-2026-07-05-184341.png" alt=""><figcaption></figcaption></figure> <figure><img src="https://i.postimg.cc/VNfx1yhq/Screenshot-2026-07-05-184359.png" alt=""><figcaption></figcaption></figure></div>
+
+That is it for provider. Now to add indexers, Go to addons->marketplace-> Newznab and add details of your usenet indexer and click install at the bottom. Also add "AIOstreams" under service section if you happen to have Torbox pro and want to use instant usenet streaming instead of usual Torbox cache and play.
+
+<figure><img src="https://i.postimg.cc/jjxpKV14/Screenshot-2026-07-05-184317.png" alt=""><figcaption></figcaption></figure>
+
+Once you finished installing the addon. Save your aiostreams config and install it if you haven't already. You should now see usenet results on stremio that can stream instantly via usenet.
+
+<figure><img src="https://i.postimg.cc/15YnDPG7/Screenshot-2026-07-05-185337.png" alt=""><figcaption></figcaption></figure>
+
+If you have any further questions or get stuck somewhere, feel free to jump onto the AIOstreams discord server.
 
 ## 10 - FAQ
 
