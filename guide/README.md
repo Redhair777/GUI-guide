@@ -550,7 +550,7 @@ For more features like anilist/mdblist/trakt integration, Poster cache and how t
 
 ## 8 - Usenet Streaming setup
 
-> Note 🔴: AIOstreams now has built in Usenet streaming capabilities, if you would like to use that instead of spinning up a separate NZBDavex container, check out section [9.1](./#id-9-usenet-streaming-with-built-in-aiostreams). They both have their pros on cons, NZBDavex might be better for usenet only setup while AIOstreams should be better with usenet+debrid setup.
+> Note 🔴: AIOstreams now has built in Usenet streaming capabilities, if you would like to use that instead of spinning up a separate NZBDavex container, check out section [9.1](./#id-9-usenet-streaming-with-built-in-aiostreams). They both have their pros on cons, NZBDavex might be better for usenet only setup while AIOstreams should be better with usenet+debrid setup.&#x20;
 
 ### 8.1 Deploying NZBDavex <a href="#deploying-nzbdavex-usenet-streaming" id="deploying-nzbdavex-usenet-streaming"></a>
 
@@ -711,6 +711,8 @@ When you click a link, it should also appear in the NZBdavex queue dashboard, an
 ***
 
 ## 9 - Usenet streaming with Built-in AIOstreams
+
+Also check out the official usenet streaming guide made by the developer of aiostreams over [here](https://docs.aiostreams.viren070.me/guides/usenet/)
 
 ### 9.1 Adding Provider
 
