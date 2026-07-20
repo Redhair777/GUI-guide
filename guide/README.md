@@ -48,7 +48,7 @@ Go to `Dashboard → Domains → click your domain → DNS → Records → Creat
 {% endtab %}
 {% endtabs %}
 
-![Spaceship screenshot](.gitbook/assets/image2.png) ![Cloudflare screenshot](.gitbook/assets/image3.png)
+![Spaceship screenshot](.gitbook/assets/image2.png) ![Cloudflare screenshot](https://i.postimg.cc/4yZmH5xM/image.webp)
 
 ***
 
@@ -312,7 +312,7 @@ In the **right side (environment variables)**, add the following env values:
 
 <img src=".gitbook/assets/image48.png" alt="AIOstreams env" width="375">
 
-Replace the `https.//aiostreams.domain.xyz` value with your actual domain. Change `user:pass` to your a username and password of your choice.
+Replace the `https://aiostreams.domain.xyz` value with your actual domain. Change `user:pass` to your a username and password of your choice.
 
 For **secret key** you need to generate one. Here are two ways to do it, choose whichever is simple for you:
 
