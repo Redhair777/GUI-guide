@@ -716,7 +716,7 @@ Also check out the official usenet streaming guide made by the developer of aios
 
 ### 9.1 Adding Provider
 
-First things first, we need to switch to nightly tag of AIOstreams. So go to stacks in dockhand-> aiostreams-> In the compose section on the left, replace `image: ghcr.io/viren070/aiostreams:latest`  to `image: ghcr.io/viren070/aiostreams:nightly` -> click **save and redeploy**. Go to container section and ensure you see aiostreams is healthy and running
+First things first, we need to switch to nightly tag of AIOstreams (this is no longer true, but I would still recommend nightly since it is more feature rich). So go to stacks in dockhand-> aiostreams-> In the compose section on the left, replace `image: ghcr.io/viren070/aiostreams:latest`  to `image: ghcr.io/viren070/aiostreams:nightly` -> click **save and redeploy**. Go to container section and ensure you see aiostreams is healthy and running
 
 <figure><img src="https://i.postimg.cc/cLHqyBYr/Screenshot-2026-07-05-182508.png" alt=""><figcaption></figcaption></figure>
 
