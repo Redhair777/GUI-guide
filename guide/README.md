@@ -838,6 +838,7 @@ If you want to tip, I highly recommend tipping the developers of these apps firs
 * **Viren** (Developer of AIOstreams) - [Donation Link](https://ko-fi.com/viren070)
 * **Cedya** and **Din** (Developers of AIOMetadata) - [Donation Link](https://buymeacoffee.com/cedya)
 * **Exate** (Developer of NZBdavex) - [Donation Link](https://patreon.com/exat3)
+* **Umbra** (Developer of PosterPlus) - [Donation Link](https://ko-fi.com/umbraprojects)
 
 If you are still swimming in money after donating to all these people, here is mine - [Tip Link](https://ko-fi.com/redhair7777).
 
