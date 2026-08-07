@@ -544,7 +544,17 @@ You can now play around your configuration (where you got your UUID) and add cus
 
 For more features like anilist/mdblist/trakt integration, Poster cache and how to set them up, please look at the [official documentation](https://github.com/cedya77/aiometadata). find the sample env, look for features you want and add them to env section (the right side of compose in dockhand UI).
 
-> 📝 I am not going to go over PosterCache in this guide because it requires terminal access for some steps and this guide is focused on GUI
+### 7.5 Enabling Image cache
+
+In the latest update, You can now set up image cache from within AIOMetadata easily. Image cache stores all the posters, backgrounds and logos images all on your server so they load very quickly on your client. You will notice a significant difference in loading times of posters. Enabling it is very easy. Simply go to `aiometadata.yourdomain.xyz/dashboard` then go to settings. Ctrl + F and search for "Image cache" and enable it. Then click "Restart now" when prompted.
+
+<figure><img src="https://i.postimg.cc/LXmsJ3NV/Screenshot-2026-08-07-132212.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://i.postimg.cc/Sx8QVvPG/Screenshot-2026-08-07-132310.png" alt=""><figcaption></figcaption></figure>
+
+In the screenshot I am not caching the backgrounds, but feel free to turn them on if you want to. Just note that it will occupy storage space in your server. You can control the storage limit in the same dashboard settings, look for "Image cache max size". You can also view the current storage usage under the "ops" menu.&#x20;
+
+<div><figure><img src="https://i.postimg.cc/SKDBGLm8/Screenshot-2026-08-07-132530.png" alt=""><figcaption></figcaption></figure> <figure><img src="https://i.postimg.cc/d0sMdNc9/Screenshot-2026-08-07-132627.png" alt=""><figcaption></figcaption></figure></div>
 
 ***
 
