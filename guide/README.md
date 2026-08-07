@@ -542,7 +542,7 @@ You can now play around your configuration (where you got your UUID) and add cus
 
 <figure><img src="https://i.postimg.cc/5tD1Pcwg/Screenshot-2026-06-17-194932.png" alt=""><figcaption><p>Fully customised stremio with custom posters and edited catalog names</p></figcaption></figure>
 
-For more features like anilist/mdblist/trakt integration, Poster cache and how to set them up, please look at the [official documentation](https://github.com/cedya77/aiometadata). find the sample env, look for features you want and add them to env section (the right side of compose in dockhand UI).
+For more features like anilist/mdblistintegration, please look at the [official documentation](https://github.com/cedya77/aiometadata). find the sample env, look for features you want and add them to env section (the right side of compose in dockhand UI).
 
 ### 7.5 Enabling Image cache
 
@@ -555,6 +555,49 @@ In the latest update, You can now set up image cache from within AIOMetadata eas
 In the screenshot I am not caching the backgrounds, but feel free to turn them on if you want to. Just note that it will occupy storage space in your server. You can control the storage limit in the same dashboard settings, look for "Image cache max size". You can also view the current storage usage under the "ops" menu.&#x20;
 
 <div><figure><img src="https://i.postimg.cc/SKDBGLm8/Screenshot-2026-08-07-132530.png" alt=""><figcaption></figcaption></figure> <figure><img src="https://i.postimg.cc/d0sMdNc9/Screenshot-2026-08-07-132627.png" alt=""><figcaption></figcaption></figure></div>
+
+### 7.6 Self-hosting your posters using Poster Plus
+
+If you like ratings on your posters and would like to customize the look of them you will like Poster plus. You can selfhost it and integrate it and integrate it into AIOmetadata easily. You can check out some sample screenshots on the official [github ](https://github.com/UmbraProjects/PostersPlus)page. In order to deploy it, you should know the drill by now. Go to stacks -> create new -> name it posterplus. Copy paste the compose on the left side of the section. And add your TMDB and MDBlist key on the right side in the env section.&#x20;
+
+```yaml
+services:
+  postersplus:
+    image: ghcr.io/umbraprojects/posterplus:latest
+    container_name: posterplus
+    expose:
+      - 8000
+    restart: unless-stopped
+    volumes:
+      - ./postersplus-cache:/app/cache
+    environment:
+      - TMDB_API_KEY=${TMDB_API_KEY?}
+      - MDBLIST_API_KEY=${MDBLIST_API_KEY?}
+      - WORKERS=1
+      - TEXTLESS_DETECTION_CONCURRENCY=2
+      - TEXTLESS_DETECTION_MAX_VOTES=3000
+    networks:
+      - pangolin_frontend
+      - aiometadata
+
+networks:
+  pangolin_frontend:
+    external: true
+  aiometadata:
+    external: true
+```
+
+<figure><img src="https://i.postimg.cc/FHZ0pvK0/Screenshot-2026-08-07-153622.png" alt=""><figcaption></figcaption></figure>
+
+Do the Pangolin routine of creating your public resource for this container and access it at `posterplus.yourdomain.xyz`  or whatever URL you set in your pangolin.&#x20;
+
+<div><figure><img src="https://i.postimg.cc/cHmq4r1F/Screenshot-2026-08-07-154217.png" alt=""><figcaption></figcaption></figure> <figure><img src="https://i.postimg.cc/0j2T6PrY/Screenshot-2026-08-07-154112.png" alt=""><figcaption></figcaption></figure></div>
+
+Once the website loads. You can now customize the poster to your hearts content! Feel free to mess around with various options and see what style you like better. You can also adjust the weight of the final rating, for instance you can make the final rating be 50% of IMDB and 50% of Letterbox or however you like it to be. Just look around the various options and configure it however you like. Once you are done configuring, click the copy config button -> go to your Aiometa config (login using your UUID/password) -> go to art provider section -> paste the URL in the `poster URL pattern` section. After pasting it, replace the `https://posterplus.yourdomain.xyz` to `http://posterplus:8000` as shown below. This ensures your pangolin doesn't interfere with AIOmetadata and Posterplus communicating with each other. Additionally turn on "Proxy Rating & Custom Art" toggle right above the URL section. Make sure you saved your config, Re-install AIOmetadata in stremio or app of choice to ensure it uses thew new posters.&#x20;
+
+<figure><img src="https://i.postimg.cc/W1PQrGDY/Screenshot-2026-08-07-154624.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://i.postimg.cc/rs19Lr86/Screenshot-2026-08-07-154902.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
