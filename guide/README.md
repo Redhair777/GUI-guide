@@ -567,8 +567,8 @@ If you like ratings on your posters and would like to customize the look of them
 ```yaml
 services:
   postersplus:
-    image: ghcr.io/umbraprojects/posterplus:latest
-    container_name: posterplus
+    image: ghcr.io/umbraprojects/postersplus:latest
+    container_name: postersplus
     expose:
       - 8000
     restart: unless-stopped
@@ -593,11 +593,11 @@ networks:
 
 <figure><img src="https://i.postimg.cc/FHZ0pvK0/Screenshot-2026-08-07-153622.png" alt=""><figcaption></figcaption></figure>
 
-Do the Pangolin routine of creating your public resource for this container and access it at `posterplus.yourdomain.xyz`  or whatever URL you set in your pangolin.&#x20;
+Do the Pangolin routine of creating your public resource for this container and access it at `postersplus.yourdomain.xyz`  or whatever URL you set in your pangolin.&#x20;
 
 <div><figure><img src="https://i.postimg.cc/cHmq4r1F/Screenshot-2026-08-07-154217.png" alt=""><figcaption></figcaption></figure> <figure><img src="https://i.postimg.cc/0j2T6PrY/Screenshot-2026-08-07-154112.png" alt=""><figcaption></figcaption></figure></div>
 
-Once the website loads. You can now customize the poster to your hearts content! Feel free to mess around with various options and see what style you like better. You can also adjust the weight of the final rating, for instance you can make the final rating be 50% of IMDB and 50% of Letterbox or however you like it to be. Just look around the various options and configure it however you like. Once you are done configuring, click the copy config button -> go to your Aiometa config (login using your UUID/password) -> go to art provider section -> paste the URL in the `poster URL pattern` section. After pasting it, replace the `https://posterplus.yourdomain.xyz` to `http://posterplus:8000` as shown below. This ensures your pangolin doesn't interfere with AIOmetadata and Posterplus communicating with each other. Additionally turn on "Proxy Rating & Custom Art" toggle right above the URL section. Make sure you saved your config, Re-install AIOmetadata in stremio or app of choice to ensure it uses thew new posters.&#x20;
+Once the website loads. You can now customize the poster to your hearts content! Feel free to mess around with various options and see what style you like better. You can also adjust the weight of the final rating, for instance you can make the final rating be 50% of IMDB and 50% of Letterbox or however you like it to be. Just look around the various options and configure it however you like. Once you are done configuring, click the copy config button -> go to your Aiometa config (login using your UUID/password) -> go to art provider section -> paste the URL in the `poster URL pattern` section. After pasting it, replace the `https://postersplus.yourdomain.xyz` to `http://posterplus:8000` as shown below. This ensures your pangolin doesn't interfere with AIOmetadata and Posterplus communicating with each other. Additionally turn on "Proxy Rating & Custom Art" toggle right above the URL section. Make sure you saved your config, Re-install AIOmetadata in stremio or app of choice to ensure it uses thew new posters.&#x20;
 
 <figure><img src="https://i.postimg.cc/W1PQrGDY/Screenshot-2026-08-07-154624.png" alt=""><figcaption></figcaption></figure>
 
