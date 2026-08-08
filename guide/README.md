@@ -556,6 +556,10 @@ In the screenshot I am not caching the backgrounds, but feel free to turn them o
 
 <div><figure><img src="https://i.postimg.cc/SKDBGLm8/Screenshot-2026-08-07-132530.png" alt=""><figcaption></figcaption></figure> <figure><img src="https://i.postimg.cc/d0sMdNc9/Screenshot-2026-08-07-132627.png" alt=""><figcaption></figcaption></figure></div>
 
+Quick note. You also need to add the following to access rules in Pangolin to AIOmetadata for the poster-cache to work.
+
+<figure><img src="https://i.postimg.cc/P5W3qVmk/Screenshot-2026-08-08-090324.png" alt=""><figcaption></figcaption></figure>
+
 ### 7.6 Self-hosting your posters using Poster Plus
 
 If you like ratings on your posters and would like to customize the look of them you will like Poster plus. You can selfhost it and integrate it and integrate it into AIOmetadata easily. You can check out some sample screenshots on the official [github ](https://github.com/UmbraProjects/PostersPlus)page. In order to deploy it, you should know the drill by now. Go to stacks -> create new -> name it posterplus. Copy paste the compose on the left side of the section. And add your TMDB and MDBlist key on the right side in the env section.&#x20;
