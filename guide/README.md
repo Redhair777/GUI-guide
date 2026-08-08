@@ -562,7 +562,7 @@ Quick note. You also need to add the following to access rules in Pangolin to AI
 
 ### 7.6 Self-hosting your posters using Poster Plus
 
-If you like ratings on your posters and would like to customize the look of them you will like Poster plus. You can selfhost it and integrate it and integrate it into AIOmetadata easily. You can check out some sample screenshots on the official [github ](https://github.com/UmbraProjects/PostersPlus)page. In order to deploy it, you should know the drill by now. Go to stacks -> create new -> name it posterplus. Copy paste the compose on the left side of the section. And add your TMDB and MDBlist key on the right side in the env section.&#x20;
+If you like ratings on your posters and would like to customize the look of them you will like Poster plus. You can selfhost it and integrate it and integrate it into AIOmetadata easily. You can check out some sample screenshots on the official [github](https://github.com/UmbraProjects/PostersPlus) page. In order to deploy it, you should know the drill by now. Go to stacks -> create new -> name it posterplus. Copy paste the compose on the left side of the section. And add your TMDB and MDBlist key on the right side in the env section.&#x20;
 
 ```yaml
 services:
