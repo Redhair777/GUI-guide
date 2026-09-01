@@ -380,7 +380,7 @@ Add a rule to bypass auth for the path `stremio/*` like shown below.
 
 ![Blocked request details](.gitbook/assets/image57.png)
 
-Click **Save Settings**. This setting means that anyone trying to access a URL that starts with `aiostreams.domain.xyz/stremio/…` will no longer be blocked by pangolin. To confirm it, try pasting your manifest URL in incognito again and it should work. Now try installing it to stremio and it should successfully install. However, this alone is not enough for proper functioning of aiostreams.  Since you may use proxy features. For proxy streams to work properly you need to also add rule to bypass `api/v1/proxy/*` . I also blocked all config pages by blocking `*/configure/*` and by setting it at the highest priority. This will ensure anyone trying to create a config needs to login to pangolin ( for friends and family you can create a temporary password for pangolin).
+Click **Save Settings**. This setting means that anyone trying to access a URL that starts with `aiostreams.domain.xyz/stremio/…` will no longer be blocked by pangolin. To confirm it, try pasting your manifest URL in incognito again and it should work. Now try installing it to stremio and it should successfully install.  I have also placed the config page behind pangolin by using "pass to auth" on `*/configure/*` and by setting it at the highest priority. This will ensure anyone trying to create a config needs to login to pangolin ( for friends and family you can create a temporary password for pangolin). Copy all the access rules as shown in the screenshot below to ensure the basic functionality of AIOstreams is intact.&#x20;
 
 ![Aiostreams Access rule](https://i.postimg.cc/s2HgC2v5/Screenshot-2026-07-05-182133.png)
 
