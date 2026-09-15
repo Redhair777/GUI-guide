@@ -799,7 +799,7 @@ If you have any further questions or get stuck somewhere, feel free to jump onto
 
 ## 10 - Installing to a Jellyfin client
 
-This section is dedicated for the users that want to use aiostreams and aiometadata in a Jellyfin compatible app instead of stremio-like apps.&#x20;
+This section is dedicated for the users that want to use aiostreams and aiometadata in a Jellyfin compatible app instead of stremio-like apps. This is meant to be a quick-start guide. If you want more info on the full features of the JF API of AIOmetadata, refer to the official documentation [here](https://github.com/cedya77/aiometadata/blob/feat/jellyfin-server/docs/jellyfin.md).
 
 1. Configure everything normally as you do in your aiostreams setup. Go to the Save & install section and copy the manifest URL
 
@@ -839,7 +839,7 @@ Now go to any Jellyfin app, When asked enter the following details
 2. Username - Username you created in the user section, in my screenshot it is 'redhair'.
 3. Password - The same password you used to login to your UUID. If you use OIDC, AIOmetadata would have generated a 'client password' for you as shown in section 10.3.
 
-If you want to set it up for other members of your family, repeat the steps with their own AIOmetadata UUID. This is meant to be a quick-start guide. If you want more info on the full features of the JF API of AIOmetadata, refer to the official documentation [here](https://github.com/cedya77/aiometadata/blob/feat/jellyfin-server/docs/jellyfin.md).
+If you want to set it up for other members of your family, repeat the steps with their own AIOmetadata UUID.&#x20;
 
 ## 11 - FAQ
 
