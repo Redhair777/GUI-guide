@@ -813,13 +813,17 @@ This section is dedicated for the users that want to use aiostreams and aiometad
 
 <figure><img src=".gitbook/assets/firefox_noQT75TAD7.png" alt=""><figcaption></figcaption></figure>
 
-4. Create a user, name it whatever you want to use it for logging in. You can add multiple users here, but it is recommended to only add users here if it is intended to be used by the same person. The reason is that any mdblist/simkl/trakt integration will work for all users. If you don't want other users messing with your personal watch history, skip creating new users for other people here. If you want to setup profiles for multiple people, then create a new UUID with AIOmetadata and repeat the process.&#x20;
+4. Create a user, name it whatever you want to use it for logging in. You can add multiple users here, but it is recommended to only add users here if it is intended to be used by the same person. The reason is that any mdblist/simkl/trakt integration will work for all users. If you don't want other users messing with your personal watch history, skip creating new users for other people here. If you want to setup profiles for multiple people, then create a new UUID with AIOmetadata and repeat the process. Use the 'user' section here just to create a different profile for the same person like "movie/tv" profile, an "anime" profile etc.
 
 <figure><img src=".gitbook/assets/firefox_aaTEqpnLbE.png" alt=""><figcaption></figcaption></figure>
 
-4. Choose a watch tracker of your preference. I personally use This server only and I recommend it for selfhosters. This setting will make it so that the source of truth for continue watching tab of your app is the selfhosted AIOmetadata DB. But if you prefer to use MDBlist or Simkl or any other provider, feel free to use them. If you choose to use external tracking service, make sure they are integrated to your UUID.
+4. Choose a watch tracker of your preference. I personally use This server only and I recommend it for selfhosters. This setting will make it so that the source of truth for continue watching tab of your app is the selfhosted AIOmetadata DB.&#x20;
 
 <figure><img src=".gitbook/assets/firefox_tgVDf6tLQX.png" alt=""><figcaption></figcaption></figure>
+
+But if you prefer to use MDBlist or Simkl or any other provider, feel free to use them. But make sure they are integrated to your UUID and turned on in the General section. You also need to enable the "When playback starts and stops" as shown below.
+
+<figure><img src=".gitbook/assets/firefox_jfpEmllWkK.png" alt=""><figcaption></figcaption></figure>
 
 5. Get the URL for your Jellyfin URL from server address section.&#x20;
 
