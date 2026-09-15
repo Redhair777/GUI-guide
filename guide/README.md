@@ -797,7 +797,43 @@ Once you have finished installing the addon. Save your aiostreams config and ins
 
 If you have any further questions or get stuck somewhere, feel free to jump onto the AIOstreams [discord](https://discord.gg/jdJUYnM2) server and ask for help.
 
-## 10 - FAQ
+## 10 - Installing to a Jellyfin client
+
+This section is dedicated for the users that want to use aiostreams and aiometadata in a Jellyfin compatible app instead of stremio-like apps.&#x20;
+
+1. Configure everything normally as you do in your aiostreams setup. Go to the Save & install section and copy the manifest URL
+
+<figure><img src=".gitbook/assets/firefox_JSv5hi8eDf.png" alt=""><figcaption></figcaption></figure>
+
+2. Head over to AIOmetadata, configure the metadata and catalogues to your desire and head over to configuration section and click Jellyfin option.
+
+<figure><img src=".gitbook/assets/firefox_lFpmnkr5uO.png" alt=""><figcaption></figcaption></figure>
+
+3. Paste the AIOstreams manifest URL in the playback section.
+
+<figure><img src=".gitbook/assets/firefox_noQT75TAD7.png" alt=""><figcaption></figcaption></figure>
+
+4. Create a user, name it whatever you want to use it for logging in. You can add multiple users here, but it is recommended to only add users here if it is intended to be used by the same person. The reason is that any mdblist/simkl/trakt integration will work for all users. If you don't want other users messing with your personal watch history, skip creating new users for other people here. If you want to setup profiles for multiple people, then create a new UUID with AIOmetadata and repeat the process.&#x20;
+
+<figure><img src=".gitbook/assets/firefox_aaTEqpnLbE.png" alt=""><figcaption></figcaption></figure>
+
+4. Choose a watch tracker of your preference. I personally use This server only and I recommend it for selfhosters. This setting will make it so that the source of truth for continue watching tab of your app is the selfhosted AIOmetadata DB. But if you prefer to use MDBlist or Simkl or any other provider, feel free to use them. If you choose to use external tracking service, make sure they are integrated to your UUID.
+
+<figure><img src=".gitbook/assets/firefox_tgVDf6tLQX.png" alt=""><figcaption></figcaption></figure>
+
+5. Get the URL for your Jellyfin URL from server address section.&#x20;
+
+<figure><img src=".gitbook/assets/firefox_noQT75TAD7 (3).png" alt=""><figcaption></figcaption></figure>
+
+Now go to any Jellyfin app, When asked enter the following details
+
+1. Jellyfin Address - The server URL you copied.
+2. Username - Username you created in the user section, in my screenshot it is 'redhair'
+3. Password - The same password you used to login to your UUID. If you use OIDC, AIOmetadata would have generated a password for you.
+
+If you want to set it up for other members of your family, repeat the steps with their own AIOmetadata UUID.
+
+## 11 - FAQ
 
 #### 1. Why make another guide when Viren's guide exists? What is the difference?
 
@@ -833,7 +869,7 @@ I am refraining from making optimization guides for now because these addons and
 
 ***
 
-## 11 - Who Asked?
+## 12 - Who Asked?
 
 #### 1. Do you have a link to Tip you?
 
