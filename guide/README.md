@@ -805,19 +805,23 @@ This section is dedicated for the users that want to use aiostreams and aiometad
 
 <figure><img src=".gitbook/assets/firefox_JSv5hi8eDf.png" alt=""><figcaption></figcaption></figure>
 
-2. Head over to AIOmetadata, configure the metadata and catalogues to your desire and head over to configuration section and click Jellyfin option.
+2. Lets Enable Jellyfin API if you are selfhosting AIOmetadata. Head over to `aiometadata.yourdomain.xyz/dashboard` . Go to settings section. Use the search bar and search Jellyfin and enable the Jellyfin API option as shown below.
+
+<figure><img src=".gitbook/assets/Screenshot 2026-09-14 221239.png" alt=""><figcaption></figcaption></figure>
+
+3. Head over to AIOmetadata, configure the metadata and catalogues to your desire and head over to configuration section and click Jellyfin option.
 
 <figure><img src=".gitbook/assets/firefox_lFpmnkr5uO.png" alt=""><figcaption></figcaption></figure>
 
-3. Paste the AIOstreams manifest URL in the playback section.
+4. Paste the AIOstreams manifest URL in the playback section.
 
 <figure><img src=".gitbook/assets/firefox_noQT75TAD7.png" alt=""><figcaption></figcaption></figure>
 
-4. Create a user, name it whatever you want to use it for logging in. You can add multiple users here, but it is recommended to only add users here if it is intended to be used by the same person. The reason is that any mdblist/simkl/trakt integration will work for all users. If you don't want other users messing with your personal watch history, skip creating new users for other people here. If you want to setup profiles for multiple people, then create a new UUID with AIOmetadata and repeat the process. Use the 'user' section here just to create a different profile for the same person like "movie/tv" profile, an "anime" profile etc.
+5. Create a user, name it whatever you want to use it for logging in. You can add multiple users here, but it is recommended to only add users here if it is intended to be used by the same person. The reason is that any mdblist/simkl/trakt integration will work for all users. If you don't want other users messing with your personal watch history, skip creating new users for other people here. If you want to setup profiles for multiple people, then create a new UUID with AIOmetadata and repeat the process. Use the 'user' section here just to create a different profile for the same person like "movie/tv" profile, an "anime" profile etc.
 
 <figure><img src=".gitbook/assets/firefox_aaTEqpnLbE.png" alt=""><figcaption></figcaption></figure>
 
-4. Choose a watch tracker of your preference. I personally use This server only and I recommend it for selfhosters. This setting will make it so that the source of truth for continue watching tab of your app is the selfhosted AIOmetadata DB.&#x20;
+6. Choose a watch tracker of your preference. I personally use This server only and I recommend it for selfhosters. This setting will make it so that the source of truth for continue watching tab of your app is the selfhosted AIOmetadata DB.&#x20;
 
 <figure><img src=".gitbook/assets/firefox_tgVDf6tLQX.png" alt=""><figcaption></figcaption></figure>
 
@@ -825,17 +829,17 @@ But if you prefer to use MDBlist or Simkl or any other provider, feel free to us
 
 <figure><img src=".gitbook/assets/firefox_jfpEmllWkK.png" alt=""><figcaption></figcaption></figure>
 
-5. Get the URL for your Jellyfin URL from server address section.&#x20;
+7. Get the URL for your Jellyfin URL from server address section.&#x20;
 
 <figure><img src=".gitbook/assets/firefox_noQT75TAD7 (3).png" alt=""><figcaption></figcaption></figure>
 
 Now go to any Jellyfin app, When asked enter the following details
 
 1. Jellyfin Address - The server URL you copied.
-2. Username - Username you created in the user section, in my screenshot it is 'redhair'
-3. Password - The same password you used to login to your UUID. If you use OIDC, AIOmetadata would have generated a password for you.
+2. Username - Username you created in the user section, in my screenshot it is 'redhair'.
+3. Password - The same password you used to login to your UUID. If you use OIDC, AIOmetadata would have generated a 'client password' for you as shown in section 10.3.
 
-If you want to set it up for other members of your family, repeat the steps with their own AIOmetadata UUID.
+If you want to set it up for other members of your family, repeat the steps with their own AIOmetadata UUID. This is meant to be a quick-start guide. If you want more info on the full features of the JF API of AIOmetadata, refer to the official documentation [here](https://github.com/cedya77/aiometadata/blob/feat/jellyfin-server/docs/jellyfin.md).
 
 ## 11 - FAQ
 
