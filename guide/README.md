@@ -839,7 +839,9 @@ Now go to any Jellyfin app, When asked enter the following details
 2. Username - Username you created in the user section, in my screenshot it is 'redhair'.
 3. Password - The same password you used to login to your UUID. If you use OIDC, AIOmetadata would have generated a 'client password' for you as shown in section 10.3.
 
-If you want to set it up for other members of your family, repeat the steps with their own AIOmetadata UUID.&#x20;
+If you want to set it up for other members of your family, repeat the steps with their own AIOmetadata UUID. If you are selfhosting, it would fail to add as jellyfin server unless you added an access rule to pangolin. Add the following rule for AIOmetadata.
+
+<figure><img src=".gitbook/assets/Screenshot 2026-09-15 110426.png" alt=""><figcaption></figcaption></figure>
 
 ## 11 - FAQ
 
